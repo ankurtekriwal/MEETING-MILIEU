@@ -1,4 +1,4 @@
-# MEETING-MILIEU
+# MEETING-MILIEU(earlier Occasus)
 Meeting Milieu application performs the below mentioned tasks:
 • Creates New Event
 • Contact Exception

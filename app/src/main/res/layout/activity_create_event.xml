@@ -1,0 +1,196 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+
+    >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.dvs.occasus.CreateEvent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Create Event"
+        android:id="@+id/textView2"
+        android:textSize="40sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView21"
+        android:layout_below="@+id/textView2">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eve_name"
+            android:width="250dp"
+            android:layout_marginTop="39dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/name_image"
+            android:layout_marginLeft="50dp"
+            android:hint="Name"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/descrip"
+            android:width="250dp"
+            android:layout_marginTop="36dp"
+            android:layout_below="@+id/eve_name"
+            android:layout_alignLeft="@+id/eve_name"
+            android:layout_alignStart="@+id/eve_name"
+            android:hint="Description"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date"
+            android:width="250dp"
+            android:layout_below="@+id/descrip"
+            android:layout_alignLeft="@+id/descrip"
+            android:layout_alignStart="@+id/descrip"
+            android:layout_marginTop="36dp"
+            android:hint="Date"
+            android:onClick="setdate"
+            android:focusable="false"/>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stime"
+            android:layout_below="@+id/date"
+            android:layout_marginTop="36dp"
+            android:layout_marginLeft="105dp"
+            android:width="100dp"
+            android:hint="Start Time"
+            android:focusable="false"
+            android:onClick="setstart_time" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/etime"
+            android:layout_below="@+id/date"
+
+            android:layout_toRightOf="@+id/stime"
+            android:layout_marginTop="36dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="30dp"
+            android:hint=" End Time"
+            android:width="120dp"
+            android:focusable="false"
+            android:onClick="setend_time" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/repeat"
+            android:layout_below="@+id/stime"
+            android:layout_marginTop="36dp"
+            android:layout_alignLeft="@+id/stime"
+            android:layout_alignStart="@+id/stime"
+            android:width="250dp"
+            android:hint="Repeat"
+            android:focusable="false"
+            android:onClick="set_repeat" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Toggles"
+            android:id="@+id/set_toggles"
+            android:layout_below="@+id/repeat"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="50dp"
+            android:onClick="set_toggles"
+            android:layout_marginTop="60dp"
+             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="(optional)"
+            android:id="@+id/textView19"
+            android:textColor="#ffff0000"
+            android:textSize="15sp"
+            android:textIsSelectable="false"
+            android:layout_below="@+id/descrip"
+            android:layout_alignLeft="@+id/descrip"
+            android:layout_alignStart="@+id/descrip" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/name"
+            android:id="@+id/name_image"
+            android:layout_alignTop="@+id/eve_name"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+             />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/desc_image"
+            android:src="@drawable/desc"
+            android:layout_alignTop="@+id/descrip"
+            android:layout_alignLeft="@+id/name_image"
+            android:layout_alignStart="@+id/name_image" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/date_image"
+            android:src="@drawable/date"
+            android:layout_alignTop="@+id/date"
+            android:layout_alignLeft="@+id/desc_image"
+            android:layout_alignStart="@+id/desc_image" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/time_image"
+            android:src="@drawable/time"
+            android:layout_marginLeft="13dp"
+            android:layout_below="@+id/date_image"
+            android:layout_marginTop="36dp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/repeat_image"
+            android:src="@drawable/repeat"
+            android:layout_alignLeft="@+id/time_image"
+            android:layout_alignStart="@+id/time_image"
+            android:layout_alignTop="@+id/repeat" />
+
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/next"
+        android:layout_alignBottom="@+id/textView21"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_marginBottom="143dp"
+        android:textColor="#ffff0000"
+        android:textSize="22sp" />
+
+
+
+
+</RelativeLayout>
+</ScrollView>
